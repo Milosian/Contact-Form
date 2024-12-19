@@ -15,27 +15,29 @@ interface Dane{
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Formularz kontaktowy';
+  title = 'Contact Form';
   
-  currentClient: Dane;
-  constructor(){
-     this.currentClient = {
-      name: '',
-      email: '',
-      message: ''
-     }
-  }
-  inputValue: string = "";
-  emailInput: string = "";
-  messageInput: string = "";
+  currentClient: Dane = {
+    name: '',
+    email: '',
+    message: ''
+  };
+  
   submitted: boolean = false
-  submitForm(){
-    this.submitted = true;
+  
+  submitForm(form: any){
+    this.submitted = true
+    if(form.valid){
+      console.log("Formularz został wysłany")
+      console.log("Imię: ", this.currentClient.name);
+      console.log("E-mail: ", this.currentClient.email)
+      console.log("Wiadomość: ", this.currentClient.message)
+    }else{
+      this.submitted = false;
+    }
   }
-  clearForm(){
-    this.currentClient.name = "";
-    this.currentClient.email = "";
-    this.currentClient.message = "";
+  clearForm(form:any){
     this.submitted = false
+    form.resetForm()
   }
 }
