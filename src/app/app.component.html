@@ -8,7 +8,7 @@
   <textarea name="message" id="messageInput" placeholder="Napisz wiadomość" [(ngModel)]="inputValue" required=""></textarea><br>
   <aside>
     <input type="submit" value="Wyślij" id="send">
-      <p *ngIf="submitted">Formularz został wysłany!</p>
-      <input type="button" value="Wyczyść formularz" id="clear">
+      <p *ngIf="submitted" id="alert">Formularz został wysłany!</p>
+      <input type="button" value="Wyczyść formularz" id="clear" (click)="clearForm()">
   </aside>
 </form>

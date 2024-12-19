@@ -36,5 +36,6 @@ export class AppComponent {
     this.currentClient.name = "";
     this.currentClient.email = "";
     this.currentClient.message = "";
+    this.submitted = false
   }
 }
