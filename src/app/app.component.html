@@ -1,0 +1,14 @@
+<form (ngSubmit)="submitForm()">
+  <h2>Kontakt</h2>
+  <label for="name">Imię:</label><br>
+  <input type="text" name="nameInput" id="nameInput" placeholder="Wprowadź Imię" required><br>
+  <label for="email">E-mail:</label><br>
+  <input type="text" name="emailInput" id="emailInput" placeholder="Wprowadź E-mail" required><br>
+  <label for="message">Wiadomość:</label><br>
+  <textarea name="message" id="messageInput" placeholder="Napisz wiadomość" [(ngModel)]="inputValue" required=""></textarea><br>
+  <aside>
+    <input type="submit" value="Wyślij" id="send">
+      <p *ngIf="submitted">Formularz został wysłany!</p>
+      <input type="button" value="Wyczyść formularz" id="clear">
+  </aside>
+</form>
