@@ -2,10 +2,10 @@
 
 ## Screenshots
 
-Clean template
+Clean template:
 ![Screenshot_20241220_182750](https://github.com/user-attachments/assets/4d45a4d9-a51f-492a-8f41-fb748d2b61cf)
 
-Fields filled in form sent
+Fields filled in form sent:<br>
 ![Screenshot_20241220_183136](https://github.com/user-attachments/assets/ac9e9d8f-d81a-468e-a153-bf07b40056a9)
 
 No fields filled in (form submission failed)
