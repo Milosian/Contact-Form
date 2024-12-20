@@ -33,7 +33,7 @@ export class AppComponent {
       console.log("E-mail: ", this.currentClient.email)
       console.log("Wiadomość: ", this.currentClient.message)
     }else{
-      this.submitted = false;
+      console.log("Niepowodzenie wysłania formularza")
     }
   }
   clearForm(form:any){

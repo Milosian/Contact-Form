@@ -1,30 +1,35 @@
-<form #form="ngForm" (ngSubmit)="submitForm(form)">
-  <h2>Kontakt</h2>
-  <label for="name">Imię:</label><br>
-  <input type="text" name="nameInput" id="nameInput" placeholder="Wprowadź Imię" [(ngModel)]="currentClient.name" required #nameInput="ngModel"><br>
-
-  <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
-    <div *ngIf="nameInput.errors?.['required']">Imię jest wymagane.</div>
-  </div>
-
-  <label for="email">E-mail:</label><br>
-  <input type="text" name="emailInput" id="emailInput" placeholder="Wprowadź E-mail" [(ngModel)]="currentClient.email" required email #emailInput="ngModel"><br>
-  
-  <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
-    <div *ngIf="emailInput.errors?.['required']">E-mail jest wymagany</div>
-    <div *ngIf="emailInput.errors?.['email']">E-mail jest niepoprawny</div>
-  </div>
-
-  <label for="message">Wiadomość:</label><br>
-  <textarea name="message" id="messageInput" placeholder="Napisz wiadomość" [(ngModel)]="currentClient.message" required #messageInput="ngModel"></textarea><br>
-  <div *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)">
-    <div *ngIf="messageInput.errors?.['required']">Treść wiadomości jest wymagana</div>
-  </div>
-  
-  <aside>
-    <input type="submit" value="Wyślij" id="send">
-      <p *ngIf="submitted && form.valid" id="alert">Formularz został wysłany!</p>
-      <p *ngIf="submitted && form.invalid" id="alert">Formularz nie został wysłany!</p>
-    <input type="button" value="Wyczyść formularz" id="clear" (click)="clearForm(form)">
-  </aside>
-</form>
+<div class="container">
+  <form #form="ngForm" (ngSubmit)="submitForm(form)">
+    <h2>Kontakt</h2>
+    <div id="data">
+      <label for="name">Imię:</label><br>
+      <input type="text" name="nameInput" id="nameInput" placeholder="Wprowadź Imię" [(ngModel)]="currentClient.name" required #nameInput="ngModel"><br>
+    
+      <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
+        <div *ngIf="nameInput.errors?.['required']" id="alert">Imię jest wymagane.</div>
+      </div>
+    </div>
+    <div id="data">
+      <label for="email">E-mail:</label><br>
+      <input type="text" name="emailInput" id="emailInput" placeholder="Wprowadź E-mail" [(ngModel)]="currentClient.email" required email #emailInput="ngModel"><br>
+      
+      <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+      <div *ngIf="emailInput.errors?.['required']" id="alert">E-mail jest wymagany</div>
+      <div *ngIf="emailInput.errors?.['email']" id="alert">E-mail jest niepoprawny</div>
+      </div>
+    </div>
+    <div id="data">
+      <label for="message">Wiadomość:</label><br>
+      <textarea name="message" id="messageInput" placeholder="Napisz wiadomość" [(ngModel)]="currentClient.message" required #messageInput="ngModel"></textarea><br>
+      <div *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)">
+        <div *ngIf="messageInput.errors?.['required']" id="alert">Treść wiadomości jest wymagana</div>
+      </div>
+    </div>
+    <aside>
+      <input type="submit" value="Wyślij" id="send">
+        <p *ngIf="submitted && form.valid" id="completed">Formularz został wysłany!</p>
+        <p *ngIf="submitted && form.invalid" id="alert">Formularz nie został wysłany!</p>
+      <input type="button" value="Wyczyść formularz" id="clear" (click)="clearForm(form)">
+    </aside>
+  </form>
+</div>
