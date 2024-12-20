@@ -2,16 +2,20 @@
 
 ## Screenshots
 
-Clean template:
+Clean template:<br>
+
 ![Screenshot_20241220_182750](https://github.com/user-attachments/assets/4d45a4d9-a51f-492a-8f41-fb748d2b61cf)
 
 Fields filled in form sent:<br>
+
 ![Screenshot_20241220_183136](https://github.com/user-attachments/assets/ac9e9d8f-d81a-468e-a153-bf07b40056a9)
 
-No fields filled in (form submission failed)
+No fields filled in (form submission failed):<br>
+
 ![Screenshot_20241220_183228](https://github.com/user-attachments/assets/229999d9-8394-42d3-b7ac-ffc319471b7d)
 
-Data validation
+Data validation:<br>
+
 ![Screenshot_20241220_183629](https://github.com/user-attachments/assets/b63ad026-ce4c-4d8a-84b6-2b8b66b5b94b)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
